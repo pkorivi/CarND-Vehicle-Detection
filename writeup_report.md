@@ -122,12 +122,12 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 ---
 
-###Discussion
+### Discussion
 
-####1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
+#### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
 The main difficulties faced in implementing the pipeline are choosing the right feature set and tuning the parameters for right output. As the system contains multiple steps and parameters tunable at each step, it's leading to hundreds of combinations and most of them turning bad at the end even through providing good results initially or on samples. There are even now some false positives and no detections for certain times, this are failures. The model needs further training and testing.
 
-Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
+#### 2. Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
 
 I built the pipleine based on the modules of code prepared during the assignments, tweaking one parameter at a time to check the result and using the combinations working best. I would train the model with more data, choose a model which could do better than this. The model performs way to slow at 1 frame per second which could never be employed in real time scenarios and needs a great amount of optimization for using in the vehicle directly.
