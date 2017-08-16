@@ -30,7 +30,7 @@ The goals / steps of this project are the following:
 [image16]: ./output_images/heat_5.png
 
 
-[image6]: ./output_images/labels_map.png
+[image6]: ./output_images/labels.png
 [image21]: ./output_images/final_box.png
 
 [image7]: ./output_images/all_box1.png
