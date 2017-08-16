@@ -31,6 +31,7 @@ The goals / steps of this project are the following:
 
 
 [image6]: ./output_images/labels_map.png
+[image21]: ./output_images/final_box.png
 
 [image7]: ./output_images/all_box1.png
 [image17]: ./output_images/all_box2.png
@@ -115,7 +116,7 @@ Here's an example result showing the heatmap from a series of frames of video, t
 ![alt text][image6]
 
 ### Here the resulting bounding boxes are drawn onto the last frame in the series:
-![alt text][image7]
+![alt text][image21]
 
 
 
