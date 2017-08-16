@@ -12,14 +12,34 @@ The goals / steps of this project are the following:
 * Estimate a bounding box for vehicles detected.
 
 [//]: # (Image References)
-[image1]: ./examples/car_not_car.png
-[image2]: ./examples/HOG_example.jpg
-[image3]: ./examples/sliding_windows.jpg
-[image4]: ./examples/sliding_window.jpg
-[image5]: ./examples/bboxes_and_heat.png
-[image6]: ./examples/labels_map.png
-[image7]: ./examples/output_bboxes.png
-[video1]: ./project_video.mp4
+[image1]: ./output_images/car_not_car_img.png
+
+[image2]: ./output_images/hog_img1.png
+[image9]: ./output_images/hog_img2.png
+[image10]: ./output_images/hog_img3.png
+
+[image3]: ./output_images/sliding_1.png
+[image4]: ./output_images/sliding_2.png
+[image11]: ./output_images/sliding_3.png
+[image12]: ./output_images/sliding_4.png
+
+[image5]: ./output_images/heat_1.png
+[image13]: ./output_images/heat_2.png
+[image14]: ./output_images/heat_3.png
+[image15]: ./output_images/heat_4.png
+[image16]: ./output_images/heat_5.png
+
+
+[image6]: ./output_images/labels_map.png
+
+[image7]: ./output_images/all_box1.png
+[image17]: ./output_images/all_box2.png
+[image18]: ./output_images/all_box3.png
+[image19]: ./output_images/all_box4.png
+[image20]: ./output_images/all_box5.png
+
+
+[video1]: ./out_project_video.mp4
 
 ---
 ###Writeup / README
@@ -39,6 +59,8 @@ I then explored different color spaces and different `skimage.hog()` parameters 
 Here is an example using the `YCrCb` color space and HOG parameters of `orientations=9`, `pixels_per_cell=(8, 8)` and `cells_per_block=(2, 2)`:
 
 ![alt text][image2]
+![alt text][image9]
+![alt text][image10]
 
 ####2. Explain how you settled on your final choice of HOG parameters.
 
@@ -56,12 +78,20 @@ The classifier is trained with combination of hog, spatial color and color histo
 
 The below image shows the image with windows for search. 
 ![alt text][image3]
+![alt text][image4]
+![alt text][image11]
+![alt text][image12]
+
 
 ####2. 
 Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result. Here are some examples of test images to demonstrate how pipeline is working. 
 
 
-![alt text][image4]
+![alt text][image7]
+![alt text][image17]
+![alt text][image18]
+![alt text][image19]
+![alt text][image20]
 ---
 
 ### Video Implementation
@@ -75,9 +105,11 @@ I recorded the positions of positive detections in each frame of the video.  Fro
 
 Here's an example result showing the heatmap from a series of frames of video, the result of `scipy.ndimage.measurements.label()` and the bounding boxes then overlaid on the last frame of video:
 
-### Here are six frames and their corresponding heatmaps:
-
 ![alt text][image5]
+![alt text][image13]
+![alt text][image14]
+![alt text][image15]
+![alt text][image16]
 
 ### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from all six frames:
 ![alt text][image6]
