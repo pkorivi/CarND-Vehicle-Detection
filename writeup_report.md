@@ -97,10 +97,10 @@ The below image shows the image with windows for search.
 
 ### Video Implementation
 
-####1. Here's a [link to my video result](./out_project_video.mp4)
+#### 1. Here's a [link to my video result](./out_project_video.mp4)
 
 
-####2. Methods to avoid false detections:
+#### 2. Methods to avoid false detections:
 
 I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  The blobs are marked only if they exist in two continious frames. 
 
