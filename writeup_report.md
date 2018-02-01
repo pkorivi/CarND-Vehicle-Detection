@@ -3,12 +3,12 @@
 
 The goals / steps of this project are the following:
 
-* Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train a classifier Linear SVM classifier
+* Perform a Histogram of Oriented Gradients (HOG) feature extraction on a labeled training set of images and train with Linear SVM classifier
 * Apply color transform and append binned color features, as well as histograms of color, to your HOG feature vector. 
 * Normalize the data
 * Train and test the model - LinearSVC
-* Implement a sliding-window technique and use your trained classifier to search for vehicles in images.
-* Run your pipeline on a video stream and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
+* Implement a sliding-window technique and use trained classifier to search for vehicles in images.
+* Run pipeline on a video stream and create a heat map of recurring detections frame by frame to reject outliers and follow detected vehicles.
 * Estimate a bounding box for vehicles detected.
 
 [//]: # (Image References)
@@ -65,7 +65,7 @@ Here is an example using the `YCrCb` color space and HOG parameters of `orientat
 
 #### 2. How I settled on final choice of HOG parameters.
 
-I tried various combinations of parameters and evaluated for their performace through test set and run them on the video. Most of the parameters failed for proper detection of cars or detecting too many false positives. I am assume there is no stadard apparoach but worked on varying individual parameter at a time and evaluating performace. As the number of parameters is immense it is impossible to try all the possible combinations. The main things that I tried are changnf color spaces, multiple channel hog features, multiple orientation lists. 
+I tried various combinations of parameters and evaluated for their performace through test set and run them on the video. Most of the parameters failed for proper detection of cars or detecting too many false positives. I assume there is no stadard apparoach, I varied individual parameter at a time and evaluated performace. As the number of parameters is immense it is impossible to try all the possible combinations. The main things that I tried are changing color spaces, channel hog features, orientation. 
 
 #### 3. How (and identify where in your code) I trained a classifier using selected HOG features and color features.
 
@@ -75,7 +75,7 @@ The classifier is trained with combination of hog, spatial color and color histo
 
 ### Sliding Window Search
 
-#### 1. The implementation for sliding windows to search all the region for the cars in an image is in 'Find cars' cell of the  IPython notebook [car_tracking.ipynb](./car_tracking.ipynb). The function 'find_cars()' takes in image, scale and start and y positions to search a regon for cars. Multiple scale, y_start_stop values are used to cover the image in a sensible and general wayto detect images in any road. 
+#### 1. The implementation for sliding windows to search all the region for the cars in an image is in 'Find cars' cell of the  IPython notebook [car_tracking.ipynb](./car_tracking.ipynb). The function 'find_cars()' takes in image, scale and start and y positions to search a regon for cars. Multiple scale, y_start_stop values are used to cover the image in a sensible and general way to detect images in any road. 
 
 The below image shows the image with windows for search. 
 
